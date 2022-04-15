@@ -53,6 +53,7 @@ public class CycleLinkedList<T> {
 
     public T get(int index){
         index %= size;
+        if(index < 0) index += size;
         CycleLinkedListNode<T> currentNode = first;
         while (index>0){
             currentNode=currentNode.getNext();
